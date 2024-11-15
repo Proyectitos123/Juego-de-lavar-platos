@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> Veamos...</title>
+<h3>Veamos...</h>
+</head>
+<body>
+<h1>Quien lavara los platos hoy</h>
+<br>
+<br>
+<table>
+<tr>
+<td>Participantes</td>
+<tr>
+<td>Jose</td>
+<td>Rossy</tr>
+<td>Alejo</td>
+<td> Todos el de cada 1</tr>
+</table>
+<h3>Ahora cada 1 elejira un numero aleatorio que no sobrepase el numero 100, se decidira el ganador hasta que 1 gane (el de cada 1 puede cambiar entre otra persona mas)
+<br>
+<br>
+Las reglas consisten es que cada uno escribira un numero, y cuando salga el que elijieron les tocara... </h>
+
+<br>
+<h1>Generador de Números Aleatorios</h1>
+    <button onclick="generateRandomNumbers()">Generar Números</button>
+    <div id="result"></div>
+
+    <script>
+        function generateRandomNumbers() {
+            const numbers = [];
+            while (numbers.length < 4) {
+                const randomNum = Math.floor(Math.random() * 100) + 1; // Rango: 1 a 100
+                if (!numbers.includes(randomNum)) { // Evitar duplicados
+                    numbers.push(randomNum);
+                }
+            }
+            document.getElementById('result').innerText = 
+                'Números Aleatorios: ' + numbers.join(', ');
+        }
+    </scr
+ 
+
+</body>
+</html>
